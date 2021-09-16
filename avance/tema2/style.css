@@ -1,0 +1,51 @@
+.contenedor{
+    width: 1100px;
+    margin: 0 auto;
+    border: 2px solid yellow;
+    height: 180px;
+}
+.encabezado{
+    border:2px solid red;
+    height: 40px;
+    text-align: center;
+}
+
+/*menu*/
+.izquierdo ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+.izquierdo ul li a:hover{
+    background-color: aqua;
+}
+.izquierdo ul{
+    margin: 0;
+    padding: 0;
+}
+.izquierdo ul li{
+    list-style: none;
+   text-align: center;
+    border: 2px solid red;
+    background-color: rgb(205, 223, 217);
+   
+}
+.izquierdo{
+  height: 100px;
+  border: 2px solid green;
+  width: 400px;
+  float: left; 
+}
+
+
+.derecho{
+    height: 100px;
+    border: 2px solid rgb(0, 2, 128);
+    width: 692.7px;
+    float: right;
+}
+.footer{
+    clear: both;
+    border: 2px solid black;
+    height: 30px;
+}
