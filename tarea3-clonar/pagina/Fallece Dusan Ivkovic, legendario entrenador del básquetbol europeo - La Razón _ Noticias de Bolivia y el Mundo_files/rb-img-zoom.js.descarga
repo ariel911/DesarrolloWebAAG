@@ -1,0 +1,63 @@
+( function( $ ) {
+    const htmlString = `<div id="rb-img-zoom">
+        <div class="img-container">
+        <img src="" scale="0">
+    </div>
+        <div class="close-btn-container">
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+    </div>`;
+    const $imgZoom = $(htmlString);
+    $(document).ready(function(){
+        $imgZoom.appendTo('body');
+    });
+
+    function openContainer(){
+        $imgZoom.addClass('active');
+        $imgZoom.css('z-index', '999999');
+        $('html').css('overflow', 'hidden');
+        $imgZoom.stop().animate({
+            opacity: 1,
+        }, 400, function(){
+
+        });
+    }
+
+    function closeContainer(){
+        $imgZoom.removeClass('active');
+        $('html').css('overflow', 'initial');
+        $imgZoom.stop().animate({
+            opacity: 0,
+        }, 400, function(){
+            $imgZoom.css('z-index', '-99');
+        });
+    }
+
+    function setImage(src){
+        $imgZoom.find('.img-container img').attr('src', src);
+    }
+
+    $(document).on('click', '[rb-zoom]', function(){
+        const src = $(this).attr('rb-zoom');
+        if(!src)
+            return;
+        openContainer();
+        setImage(src);
+    })
+
+    $imgZoom.on('click', '.close-btn', function(){
+        closeContainer();
+    })
+
+    $(window).click(function() {
+        if($imgZoom.hasClass('active'))
+            closeContainer();
+    });
+
+    $imgZoom.click('.img-container', function(event){
+        event.stopPropagation();
+    });
+
+} )( jQuery );

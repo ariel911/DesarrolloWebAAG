@@ -1,0 +1,54 @@
+( function( $ ) {
+    var data = {
+        'action': 'my_action',
+    };
+
+    // We can also pass the url value separately from ajaxurl for front end AJAX implementations
+    // $.post(ajax_object.ajax_url, data, function(response) {
+    //     alert('Got this from the server: ' + response);
+    // });
+
+    $(document).on('submit', '.lr-encuesta-block form', function(e){
+        e.preventDefault();
+        let $block = $(this).closest('.lr-encuesta-block');
+        let encuestaID = parseInt($block.attr('data-id'));
+        let votedOption = $block.find(`input[name='poll-${encuestaID}']:checked`).val();
+        $(this).find(':input').prop("disabled", true);
+        $(this).slideUp();
+        $block.find('.loading-detail').slideDown();
+
+        $.post(siteData.homeUrl + `/wp-json/lr/v1/encuesta/${encuestaID}/vote`, {
+            'action': $(this).find('input[name=action]').val(),
+            'voted_option': votedOption,
+        }, function(response) {
+
+        })
+        .done(function() {
+            $.get(siteData.homeUrl + `/wp-json/lr/v1/encuesta/${encuestaID}/statistics`)
+            .done(function(response){
+                $block.find('.results-holder').slideDown();
+                let totalVotes = response.votes_count;
+                $block.find('.results-holder .greetings .votes-amount').text(totalVotes);
+                $block.find('.results-holder .greetings .poll-greetings').slideDown();
+                response.results.forEach(function(optionVotes, optionIndex){
+                    let $optionResult = $block.find(`.results-holder .poll-li-results:nth-child(${optionIndex + 1})`);
+                    let $pollResultBar = $optionResult.find('.poll-results-bar');
+                    $pollResultBar.text(`${Math.round(optionVotes * 100 / totalVotes)}%`);
+                    if(response.current_user_vote == optionIndex)
+                        $pollResultBar.addClass('user-vote');
+                });
+                console.log(response);
+            })
+            .always(function() {
+                $block.find('.loading-detail').slideUp();
+            });
+        })
+        .fail(function() {
+            // alert( "error" );
+        })
+        .always(function() {
+            // alert( "finished" );
+        });
+    });
+
+} )( jQuery );
