@@ -1,7 +1,0 @@
-(function($){
-    $(document).ready(function() {
-        $(document).click( '.lr-bnews-block .close-button', function(e){
-            $(e.target).closest('.lr-bnews-block').slideUp(200);
-        });
-    });
-})(jQuery);
