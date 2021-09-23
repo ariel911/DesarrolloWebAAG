@@ -36,6 +36,8 @@
            }
            
     ?>
+
+ //ejercicio 4
     <?php 
      echo"<p> <strong>4.- Determinar si n es un numero primo </strong><p>";
     $n=7;
