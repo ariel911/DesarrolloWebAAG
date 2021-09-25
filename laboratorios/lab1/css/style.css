@@ -1,0 +1,157 @@
+
+h1{
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 1.65rem;
+}
+h3,h6{
+    padding: 0;
+    margin: 0;
+}
+
+
+.contenedor{
+    width: 900px;
+    margin: auto;
+    height: 560px;
+    margin-top: 5rem;
+    border: 0.2px solid black;
+}
+.header{
+    max-width: 100%;
+    height: 170px;
+    background-color: rgb(255, 78, 78);
+    border-bottom: 1px solid black;
+}
+.navegacion{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(189, 223, 255);
+    text-align: center;
+}
+.navegacion a:hover{
+    background-color: rgb(13, 13, 14);
+    color: white;
+}
+.info{
+    width: 100%;
+    height: 270px;
+    background-color: rgb(124, 159, 253);
+}
+.navegacion nav{
+    width: 100%;
+    margin-top: 3.4rem;
+    margin-left: 5px;
+}
+/*posicionamiento*/
+
+.navegacion{
+    float: left;
+}
+.info{
+    float: right;
+}
+/*menu*/
+.navegacion nav a{
+    text-decoration: none;
+    padding: 10px 40px;
+    margin: 0 auto;
+    border: 1px solid white;
+    color: black;
+    max-height: 100%;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+    background-color: white;
+    border: 1px solid black;
+}
+/*titulo*/
+.titulo{
+    width: 750px;
+    height: 60%;
+    margin: 0 auto;
+
+}
+.titulo-logo{
+    float: left;
+    margin-top: 0.5rem;
+    height: 80px;
+    width: 60px;
+    background-image: url(../usfx.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.titulo-letras{
+    float: right;
+    padding-right: 5rem;
+}
+.tecno{
+    float: left;
+}
+.tecno-sucre{
+    clear: both;
+    
+}
+.sucre{
+    float:right;
+    padding: 0;
+}
+.sucre {
+    font-size: .8rem;
+    margin-top: 5px;
+    font-weight: 900;
+    text-shadow: 0.1em 0.06em rgb(206, 205, 205);  
+}
+.span1{
+    color: red;
+    text-shadow: 0.1em 0.06em rgb(206, 205, 205); 
+}
+.span2{
+    color: yellow;
+    text-shadow: 0.1em 0.06em rgb(206, 205, 205); 
+}
+.span3{
+    color: green;
+    text-shadow: 0.1em 0.06em rgb(206, 205, 205);  
+}
+.xavier{
+    text-shadow: 0.1em 0.06em rgb(206, 205, 205);  
+    color: red;
+}
+.tecno{
+    
+    color: blue;
+}
+/*informacion*/
+
+.informacion p{
+    line-height: .6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+   
+}
+.informacion{
+  text-align: center;
+  padding-top: 1.2rem;
+}
+.titulo-parrafo{
+   clear: both;
+   line-height: .3rem;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.1rem;
+   margin-left: 1rem;
+   margin-top: -1rem;
+   color: white;
+}
+/*footer*/
+
+.footer{
+    text-align: center;
+    background-color: yellow;
+}
+
+/*info horarios*/
+.horarios table{
+    margin: 0 auto;
+}

@@ -11,6 +11,7 @@
     
     //ejercicio 1
     echo"<p> <strong>1.- Realizar un programa en php que permita calcular el mayor de 3 numeros </strong><p>";
+    
     $num1 =6;
     $num2 =8;
     $num3 =9;
