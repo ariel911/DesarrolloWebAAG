@@ -1,3 +1,4 @@
+
 <?php
   include("pila.php");
 
@@ -6,6 +7,9 @@
   $pila->insertar("jose");
   $pila->insertar("carlos");
 
+  $pila->mostrar();
+  
+  $pila->eliminar();
   $pila->mostrar();
 
 

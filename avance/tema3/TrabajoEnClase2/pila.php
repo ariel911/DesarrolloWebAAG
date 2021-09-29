@@ -10,7 +10,7 @@ class pila {
         $this->elementos[$this->tope] =  $n;
         $this->tope++;
     }
-    public function eliminar($n){
+    public function eliminar(){
         if($this->tope==0){
             echo "pila vacia";
         }
@@ -23,6 +23,7 @@ class pila {
         for($i=0;$i< $this->tope;$i++){
               echo $this->elementos[$i],"<br>";
         }
+        "<hr>";
     }
 
 }
