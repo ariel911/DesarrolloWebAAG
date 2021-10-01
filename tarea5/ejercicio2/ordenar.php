@@ -2,7 +2,7 @@
 
 include("vector.php");
 
-$v1 = new vector([1,4,6,7,9,2,3]);
+$v1 = new vector([3,1,6,3,2,518,2,45,3]);
 echo "vector desordenado <br>";
 $v1->imprimir();
 $v1->burbuja();
