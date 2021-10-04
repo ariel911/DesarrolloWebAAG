@@ -7,10 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="menu.php" method="get">
-        <label >Ingrese numero:</label>
-        <input type="number" name="num">
-        <input type="submit" name="calcular">
-    </form>
+    <h2>suma del vector:</h2>
+    <?php
+    
+    $resultado=0;
+     $n = $_POST['n'];
+     for($i=1;$i<=$n;$i++){
+         $resultado = $x = $_POST['n'.$i]+$_POST['m'.$i];
+         echo $resultado." ";
+
+     }
+    ?>
 </body>
 </html>
