@@ -4,7 +4,7 @@ $sql = "SELECT * FROM usuarios";
 $resultado = $mysqli -> Query($sql);
 
   if($resultado->num_rows>0){
-      while($row = $resultado->fetch_assoc()){
+      while($row = $resultado->fetch_assoc()){ //fetch listas de fila con los atributos
           echo "<pre>";
           var_dump($row);
           echo "</pre>";
