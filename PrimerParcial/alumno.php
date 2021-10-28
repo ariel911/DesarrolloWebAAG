@@ -34,9 +34,6 @@ class lista_alumno
     {
             $this->tope--;
             $aux=[$this->nombre[$this->tope],$this->apellido[$this->tope],$this->cu[$this->tope]];
-            $nombre = $this->nombre[$this->tope];
-            $apellido = $this->apellido[$this->tope];
-            $cu = $this->cu[$this->tope];
             $_SESSION['nombre'] = $this->nombre;
             $_SESSION['apellido'] = $this->apellido;
             $_SESSION['cu'] = $this->cu;

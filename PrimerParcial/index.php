@@ -31,7 +31,6 @@ if (isset($_COOKIE['pudo'])) {
             <ul class="menu">
                 <li><a href="#">inicio </a></li>
 				<li><a href="menu.php">pregunta2</a></li>
-
             </ul>
         </div>
 
@@ -53,8 +52,6 @@ if (isset($_COOKIE['pudo'])) {
         <div>Cu: 10350511</div>
 		<div> nro ingresos: <?php echo $_COOKIE['pudo']; ?>
 	 </div>
-
-    
     </div>
 </body>
 </html>
