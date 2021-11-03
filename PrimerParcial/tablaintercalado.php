@@ -17,11 +17,12 @@ $m = $_POST['m'];
 $cont=0;
 for($i=0;$i<$n;$i++){
     echo "<tr>";
-    if($cont == 4){
+    if($cont == 3){
         $cont=0;
     }
     $cont++;
     for($j=0;$j<$m;$j++){
+       
          if($i % 2 == 0){
             $color = 'blanco';
             $color2 = 'azul';
@@ -31,7 +32,7 @@ for($i=0;$i<$n;$i++){
             $color = 'rojo';
          }
         
-        if($i % 2==0 && $cont < 3){
+        if($i % 2==0 && $cont < 2){
             if($j % 2==0){
             echo "<td class='$color2'> Viva </td>";
 
