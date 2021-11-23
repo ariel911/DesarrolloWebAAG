@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2. Crear un programa en java script que cree la clase alumnos con las propiedades : nombres, apellidos, CU, Direccion
+           y el metodo mostrar que muestra sus datos luego instanciar un alumno y mostrar sus datos  -->
+    <script>
+        class Alumnos{
+
+            constructor(nombre,apellidos,Cu,Direccion){
+                this.nombre = nombre;
+                this.apellidos =apellidos;
+                this.Cu = Cu;
+                this.Direccion = Direccion;
+            }
+            mostrar(){
+                document.write(`Nombre: ${this.nombre} <br>
+                                Apellido: ${this.apellidos}<br>
+                                Cu: ${this.Cu}<br>
+                                Direccion: ${this.Direccion} `)
+            }  
+
+        }
+        alumno1 = new Alumnos("Ariel","Achu","35-4437","Villa Armonia")
+
+        alumno1.mostrar();
+    </script>
+</body>
+</html>
