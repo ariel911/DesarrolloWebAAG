@@ -17,7 +17,11 @@
          cadena = parseInt(prompt())
          a.push(cadena)
      }
-     
+   
+     document.write(`<br> vector Original: `)
+     a.forEach(elemento=>document.write(" ",elemento))
+     a.sort()
+     document.write(`<br> vector ordenado: `)
      a.forEach(elemento=>document.write(" ",elemento))
          
      
