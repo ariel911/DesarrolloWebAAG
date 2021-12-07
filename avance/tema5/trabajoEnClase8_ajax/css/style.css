@@ -1,0 +1,141 @@
+.header{
+    background-color: rgb(48, 47, 143);
+    height: 100px;
+}
+h1{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+body{
+    background: #d1ecff;  /* fallback for old browsers */
+   
+}
+.contenedor{
+    width: 1100px;
+    margin: 0 auto;
+    
+}
+/*menu*/
+.contenido,
+.header h1,
+.navegacion{
+    text-align: center;
+}
+.navegacion a{
+    padding: 10px;
+}
+.navegacion a:hover{
+    background-color: #d1ecff;
+    color: black;
+}
+.contenido{
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+
+}
+/*seccion*/
+.letritas{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: -19px;
+}
+
+
+/*imagene secciond*/
+.imagenes{
+    width: 1000px;
+    height: 1000px;
+
+    margin: 0 auto;
+}
+
+.card1{
+    float: right;
+}
+.card2{
+    float: left;
+}
+.card3{
+    float: right;
+}
+.card1-1{
+     float:left;
+}
+.card2-2{
+    float:left;
+}
+.card3-3{
+    float:left;
+}
+.card2-margin{
+    margin-top: 55px;
+    margin-left: 30px;
+}
+.card3-margin{
+    float: unset;
+}
+.imagenes-hobbies{
+
+    width: 1020px;
+    height: 400px;
+    margin: 0 auto;
+}
+/*videos*/
+
+.videos{
+    clear: both;
+    width: 1050px;
+    height: 500px;
+    margin: 0 auto;
+
+    margin-bottom: 2rem;
+}
+.video1{
+    float: left;
+    
+}
+.video2{
+    float: left;
+}
+.video3{
+    float: left;
+}
+
+
+
+.contenido-enviar{
+   width: 600px;
+   height: 600px;
+   background-color:  #d1ecff;
+   margin: 0 auto;
+}
+
+/*estilos imagenes*/
+
+.imagen2{
+    margin-top: 25px;
+    border-radius: 50%;
+    -webkit-box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+}
+.imagen{
+    margin: 10px;
+    border-radius: 7px;
+    -webkit-box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+box-shadow: 1px 1px 14px -1px rgba(0,0,0,0.75);
+}
+/*formulario*/
+
+label{
+    font-size: 1.2rem;
+    font-family:'Courier New', Courier, monospace;
+}
