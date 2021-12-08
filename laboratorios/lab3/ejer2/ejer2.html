@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="radio" name="r" value="azul" class="color"> azul <br>
+    <input type="radio" name="r" value="verde" class="color"> verde <br>
+    <input type="radio" name="r" value="anaranjado" class="color"> anaranjado <br> 
+    <input type="submit" id ="cambiar" > 
+    <div style="height: 200px ; width:200px; text-align: center; " id="res" > Ariel Achu Gabriel </div><br>
+    <script>
+        const cambiar = document.querySelector('#cambiar');
+        cambiar.addEventListener('click', () => {
+        const color = document.querySelector('.color:checked').value;
+        const res = document.querySelector('#res');
+        res.style.display = 'flex';
+        res.style.alignItems = 'center';
+        res.style.justifyContent = 'center';
+
+        switch (color) {
+            case 'azul':
+                res.style.backgroundColor = 'blue';
+                break;
+            case 'verde':
+                res.style.backgroundColor = 'green';
+                break;
+            case 'anaranjado':
+                res.style.backgroundColor = 'orange';
+                break;
+            default: alert('no seleccionaste nada');
+                }
+
+        });
+
+            
+        
+
+    </script>
+
+
+</body>
+</html>

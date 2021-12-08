@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align:center;">
+    <div style="width:900px;height:200px;background-color: beige; margin: 0 auto;"> 
+    <br><br><br>
+    <label >Ingresar fecha: ejemplo  "11 03 2022"</label> <br> <br>
+    <input type="text" class="dia" style="width: 40px;" placeholder="dd">
+    <input type="text" class="mes" style="width: 40px;" placeholder="mm">
+    <input type="text" class="anio" style="width: 40px;" placeholder="aa">
+    <button id="boton">Calcular</button>
+    <br>
+    <span id="res"></span>
+    <span id="DE"></span> 
+    <span id="res2"></span>
+    <span id="DEL"></span> 
+    <span id="res3"></span>
+</div>
+    <script>
+        const boton = document.querySelector('#boton');
+        const de = document.querySelector('#DE');
+        const del = document.querySelector('#DEL');
+
+        boton.addEventListener('click', dia);
+       
+        boton.addEventListener('click', mes);
+        boton.addEventListener('click', anio);
+
+        function dia() {
+            var dec, uni, decena, unidad;
+            const res = document.querySelector('#res');
+            const num = parseInt(document.querySelector('.dia').value);
+
+            if (num <= 0) {
+                document.write("numero invalido!!!", '<BR/>');
+            }
+            if (num > 10 && num <= 20) {
+                switch (num) {
+                    case 11:
+                        res.innerHTML = "ONCE";
+                        break;
+                    case 12:
+                        res.innerHTML = "DOCE";
+                        break;
+                    case 13:
+                        res.innerHTML = "TRECE";
+                        break;
+                    case 14:
+                        res.innerHTML = "CATORCE";
+                        break;
+                    case 15:
+                        res.innerHTML = "QUINCE";
+                        break;
+                    case 16:
+                        res.innerHTML = "DIECISEIS";
+                        break;
+                    case 17:
+                        res.innerHTML = "DIECISIETE";
+                        break;
+                    case 18:
+                        res.innerHTML = "DIECIOCHO";
+                        break;
+                    case 19:
+                        res.innerHTML = "DIECINUEVE";
+                        break;
+                    case 20:
+                        res.innerHTML = "VEINTE";
+                        break;
+                }
+            } else {
+                dec = (num - (num % 10)) / 10;
+                uni = num % 10;
+                switch (dec) {
+                    case 1:
+                        decena = "DIEZ";
+                        break;
+                    case 2:
+                        decena = "VENTI";
+                        break;
+                    case 3:
+                        decena = "TREINTA";
+                        break;
+                    case 4:
+                        decena = "CUARENTA";
+                        break;
+                    case 5:
+                        decena = "CINCUENTA";
+                        break;
+                    case 6:
+                        decena = "SESENTA";
+                        break;
+                    case 7:
+                        decena = "SETENTA";
+                        break;
+                    case 8:
+                        decena = "OCHENTA";
+                        break;
+                    case 9:
+                        decena = "NOVENTA";
+                        break;
+                }
+                if (uni != 0) {
+                    switch (uni) {
+                        case 1:
+                            unidad = "UNO";
+                            break;
+                        case 2:
+                            unidad = "DOS";
+                            break;
+                        case 3:
+                            unidad = "TRES";
+                            break;
+                        case 4:
+                            unidad = "CUATRO";
+                            break;
+                        case 5:
+                            unidad = "CINCO";
+                            break;
+                        case 6:
+                            unidad = "SEIS";
+                            break;
+                        case 7:
+                            unidad = "SIETE";
+                            break;
+                        case 8:
+                            unidad = "OCHO";
+                            break;
+                        case 9:
+                            unidad = "NUEVE";
+                            break;
+                    }
+                    if (dec > 2) {
+                        res.innerHTML = decena + " Y " + unidad;
+                    } else {
+                        res.innerHTML = decena + "" + unidad;
+                    }
+                } else {
+                    res.innerHTML = decena;
+                }
+            }
+            de.innerHTML = " DE ";
+        }
+
+        function mes(){
+            const num = document.querySelector('.mes').value;
+
+            switch (num) {
+                case '01':
+                    document.querySelector('#res2').innerHTML = "ENERO";
+                    break;
+                case '02':
+                    document.querySelector('#res2').innerHTML = "FEBRERO";
+                    break;
+                case '03':
+                    document.querySelector('#res2').innerHTML = "MARZO";
+                    break;
+                case '04':
+                    document.querySelector('#res2').innerHTML = "ABRIL";
+                    break;
+                case '05':
+                    document.querySelector('#res2').innerHTML = "MAYO";
+                    break;
+                case '06':
+                    document.querySelector('#res2').innerHTML = "JUNIO";
+                    break;
+                case '07':
+                    document.querySelector('#res2').innerHTML = "JULIO";
+                    break;
+                case '08':
+                    document.querySelector('#res2').innerHTML = "AGOSTO";
+                    break;
+                case '09':
+                    document.querySelector('#res2').innerHTML = "SEPTIEMBRE";
+                    break;
+                case '10':
+                    document.querySelector('#res2').innerHTML = "OCTUBRE";
+                    break;
+                case '11':
+                    document.querySelector('#res2').innerHTML = "NOVIEMBRE";
+                    break;
+                case '12':
+                    document.querySelector('#res2').innerHTML = "DICIEMBRE";
+                    break;
+                default:
+                    document.querySelector('#res2').innerHTML = "MES INVALIDO";
+                    break;
+            }
+            del.innerHTML = " DEL DOSMIL ";
+        }
+        function anio(){
+            var dec, uni, decena, unidad;
+            const res = document.querySelector('#res3');
+            var num3 = parseInt(document.querySelector('.anio').value);
+            var num = num3%100;
+
+            if (num <= 0) {
+                document.write("numero invalido!!!", '<BR/>');
+            }
+            if (num > 10 && num <= 20) {
+                switch (num) {
+                    case 11:
+                        res.innerHTML = "ONCE";
+                        break;
+                    case 12:
+                        res.innerHTML = "DOCE";
+                        break;
+                    case 13:
+                        res.innerHTML = "TRECE";
+                        break;
+                    case 14:
+                        res.innerHTML = "CATORCE";
+                        break;
+                    case 15:
+                        res.innerHTML = "QUINCE";
+                        break;
+                    case 16:
+                        res.innerHTML = "DIECISEIS";
+                        break;
+                    case 17:
+                        res.innerHTML = "DIECISIETE";
+                        break;
+                    case 18:
+                        res.innerHTML = "DIECIOCHO";
+                        break;
+                    case 19:
+                        res.innerHTML = "DIECINUEVE";
+                        break;
+                    case 20:
+                        res.innerHTML = "VEINTE";
+                        break;
+                }
+            } else {
+                dec = (num - (num % 10)) / 10;
+                uni = num % 10;
+                switch (dec) {
+                    case 1:
+                        decena = "DIEZ";
+                        break;
+                    case 2:
+                        decena = "VENTI";
+                        break;
+                    case 3:
+                        decena = "TREINTA";
+                        break;
+                    case 4:
+                        decena = "CUARENTA";
+                        break;
+                    case 5:
+                        decena = "CINCUENTA";
+                        break;
+                    case 6:
+                        decena = "SESENTA";
+                        break;
+                    case 7:
+                        decena = "SETENTA";
+                        break;
+                    case 8:
+                        decena = "OCHENTA";
+                        break;
+                    case 9:
+                        decena = "NOVENTA";
+                        break;
+                }
+                if (uni != 0) {
+                    switch (uni) {
+                        case 1:
+                            unidad = "UNO";
+                            break;
+                        case 2:
+                            unidad = "DOS";
+                            break;
+                        case 3:
+                            unidad = "TRES";
+                            break;
+                        case 4:
+                            unidad = "CUATRO";
+                            break;
+                        case 5:
+                            unidad = "CINCO";
+                            break;
+                        case 6:
+                            unidad = "SEIS";
+                            break;
+                        case 7:
+                            unidad = "SIETE";
+                            break;
+                        case 8:
+                            unidad = "OCHO";
+                            break;
+                        case 9:
+                            unidad = "NUEVE";
+                            break;
+                    }
+                    if (dec > 2) {
+                        res.innerHTML = decena + " Y " + unidad;
+                    } else {
+                        res.innerHTML = decena + "" + unidad;
+                    }
+                } else {
+                    res.innerHTML = decena;
+                }
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -19,6 +19,7 @@
             <a onclick="llamdaajax3()" >Mis Amigos</a>
             <a onclick="llamdaajax4()">Mis Hobbies </a>
             <a onclick="llamdaajax5()">Enviame un mensaje</a>
+            <a onclick="llamdaajax6()">Enviar</a>
         </nav>
     </header>
     <section class="seccion contenedor">
@@ -96,6 +97,17 @@
         function llamdaajax5() {
             var xhttp = new XMLHttpRequest();
             xhttp.open("GET", "enviamemensaje.html", true);
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.querySelector(".seccion").innerHTML = this.responseText;
+                }
+            }
+            
+            xhttp.send();
+        }
+        function llamdaajax6() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "enviarcomentario.html", true);
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     document.querySelector(".seccion").innerHTML = this.responseText;
