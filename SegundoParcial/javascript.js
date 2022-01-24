@@ -1,3 +1,4 @@
+//creando los inputs de las cajas pregunta 5
 function crearcajas() {
     var n = document.getElementById("numero").value;
     var res = document.querySelector(".inpus");
@@ -9,7 +10,7 @@ function crearcajas() {
     }
 
 }
-
+//funcion para sacar valores
 function multiplicar() {
     var n = document.getElementById("numero").value;
     var res = document.querySelector(".resmul");
@@ -20,10 +21,8 @@ function multiplicar() {
 
     }
     res.innerHTML = acumulador;
-
-
 }
-
+//pregunta 5 llamada ajax
 function llamada1() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -35,6 +34,8 @@ function llamada1() {
     xhttp.send();
 }
 
+//pregunta 2 llamar a tabla por ajax fibonacci y factorial
+
 function llamada2() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -45,6 +46,7 @@ function llamada2() {
     xhttp.open("GET", "tabla.html", true);
     xhttp.send();
 }
+//pregunta 3   modificando  
 function llamada3() {
     var xhttp = new XMLHttpRequest();
     var titulo = document.querySelector(".title");
@@ -58,7 +60,7 @@ function llamada3() {
     xhttp.send();
 }
 
-
+//funcion para mostrar fibonacci y factorial
 function calcula() {
     var radio = document.getElementsByName("radio");
     var n = document.querySelector(".input2").value;
@@ -88,6 +90,8 @@ function calcula() {
         
         }
 }
+
+//pregunta 4 listar libros 
 function llamada4() {
     var xhttp = new XMLHttpRequest();
     var titulo = document.querySelector(".title");
